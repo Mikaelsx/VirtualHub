@@ -1,12 +1,22 @@
-import { Linking } from "react-native"
+// IMPORTS
+
 import { Container } from "../../components/Container/style"
 import { Logo } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { Input } from "../../components/Input/style"
-import { ContentAccount, LinkAccount, LinkMedium, TextAccount } from "../../components/Link/style"
-import { Button, ButtonTitle, ButtonGoogle, ButtonTitleGoogle} from "../../components/Button/style"
+import { ContentAccount } from "../../components/Link/style"
+import { LinkAccount } from "../../components/Link/style"
+import { LinkMedium } from "../../components/Link/style"
+import { TextAccount } from "../../components/Link/style"
+import { Button } from "../../components/Button/style"
+import { ButtonTitle } from "../../components/Button/style"
+import { ButtonGoogle } from "../../components/Button/style"
+import { ButtonTitleGoogle } from "../../components/Button/style"
 
+import { Linking } from "react-native"
 import { AntDesign } from '@expo/vector-icons';
+
+// EXPORT
 
 export const Login = () => {
     return(

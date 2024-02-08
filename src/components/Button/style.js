@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 // BUTTON
 
 export const Button = styled.TouchableOpacity`
@@ -16,6 +15,9 @@ background-color: #496BBA;
 border: 2px solid #496BBA;
 border-radius: 5px; 
 `
+
+// TEXT DO BUTTON
+
 export const ButtonTitle = styled.Text`
 font-size: 14px;
 font-family: 'MontserratAlternates_700Bold';
@@ -36,6 +38,9 @@ background-color: transparent;
 border: 2px solid #496BBA;
 border-radius: 5px;
 `
+
+// TEXT DO BUTTON GOOGLE
+
 export const ButtonTitleGoogle = styled.Text`
 font-size: 14px;
 font-family: 'MontserratAlternates_700Bold';
