@@ -18,6 +18,59 @@ border-radius: 5px;
 font-size: 14px;
 font-family: 'MontserratAlternates_600SemiBold';
 `
+
+// INPUT - PACIENTE
+
+export const InputPaciente = styled.TextInput.attrs({
+    placeholderTextColor: "#4E4B59"
+})`
+width: 90%;
+height: 53px;
+margin: 10px 0px;
+align-items: center;
+padding: 10px;
+
+background-color: #F5F3F3;
+border: none ;
+border-radius: 5px; 
+
+font-size: 14px;
+font-family: 'MontserratAlternates_500Medium';
+`
+
+// INPUT - PACIENTE GRANDE
+
+export const InputPacienteGrande = styled.TextInput.attrs({
+    placeholderTextColor: "#4E4B59"
+})`
+width: 90%;
+height: 120px;
+margin: 10px 0px;
+align-items: center;
+padding: 10px;
+
+background-color: #F5F3F3;
+border: none ;
+border-radius: 5px; 
+
+font-size: 14px;
+font-family: 'MontserratAlternates_500Medium';
+`
+// INPUT - PACIENTE PEQUENO
+
+export const InputPacientePequeno = styled(InputPaciente)`
+width: 80%;
+height: 53px;
+margin: 10px 0px;
+
+background-color: #F5F3F3;
+border: none;
+border-radius: 5px; 
+
+font-size: 16px;
+font-family: 'MontserratAlternates_600SemiBold';
+`
+
 // INPUT - LINE 
 
 export const InputLine = styled(Input)`
@@ -42,4 +95,10 @@ font-family: 'MontserratAlternates_600SemiBold';
 export const InputBox = styled.View`
 flex-direction: row;
 gap: 15px;
+`
+
+// INPUT - OUTPUT
+
+export const OutPut = styled.View`
+flex: 1;
 `

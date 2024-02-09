@@ -12,11 +12,15 @@ import { RecuperarSenha } from "./src/screens/RecuperarSenha/RecuperarSenha";
 import { VerificarEmail } from "./src/screens/VerificarEmail/VerificarEmail";
 import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
 import { CriarConta } from "./src/screens/CriarConta/CriarConta";
+import { Perfil } from "./src/screens/Perfil/Perfil";
+import { Prontuario } from "./src/screens/Prontuario/Prontuario";
+import { Prescricao } from "./src/screens/Prescricao/Prescricao";
 
 // IMPORT - FONTS
 
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
+import { useFonts, MontserratAlternates_500Medium, MontserratAlternates_600SemiBold, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
 import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
+import { View } from "react-native";
 
 
 const Stack = createNativeStackNavigator();
@@ -24,6 +28,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
   const [fontsLoaded, fontError] = useFonts({
+    MontserratAlternates_500Medium,
     MontserratAlternates_600SemiBold,
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
@@ -84,6 +89,22 @@ export default function App() {
           component={CriarConta}
           options={{ title: "Criar Conta" }}
         />
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{ title: "Perfil" }}
+        />
+        <Stack.Screen
+          name="Prontuario"
+          component={Prontuario}
+          options={{ title: "Prontuario" }}
+        />
+        <Stack.Screen
+          name="Prescricao"
+          component={Prescricao}
+          options={{ title: "Prescricao" }}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

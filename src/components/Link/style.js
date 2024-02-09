@@ -31,3 +31,26 @@ font-family: 'MontserratAlternates_600SemiBold';
 color: #4D659D;
 text-decoration-line: underline;
 `
+
+// LINK PACIENTE
+
+export const LinkPaciente = styled.Text`
+align-self: center;
+padding-right: 35px;
+margin-top: 20px;
+margin-bottom: 50px;
+font-size: 14px;
+font-family: 'MontserratAlternates_600SemiBold';
+color: #4D659D;
+text-decoration-line: underline;
+`
+
+// LINK - RED
+
+export const LinkRed = styled.Text`
+align-self: center;
+padding-right: 80px;
+font-size: 12px;
+font-family: 'MontserratAlternates_600SemiBold';
+color: #C81D25;
+`
