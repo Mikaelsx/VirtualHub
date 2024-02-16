@@ -9,6 +9,13 @@ margin-bottom: 5px;
 color: #33303E;
 `
 
+export const TitleWhite = styled.Text`
+font-size: 20px;
+font-family: 'MontserratAlternates_600SemiBold';
+margin-bottom: 5px;
+color: white;
+`
+
 // SUBTÍTULO
 
 export const SubTitle = styled.Text`
@@ -42,3 +49,16 @@ gap: 20px;
 flex-direction: row;
 margin: 10px 0px;
 `
+
+export const TitleConsulta = styled.Text`
+font-size: 14px;
+font-family: 'Quicksand_500Medium';
+color: #4E4B59;
+`
+
+export const TitleButton = styled.Text`
+font-size: 12px;
+font-family: 'Quicksand_500Medium';
+color: #4E4B59;
+`
+

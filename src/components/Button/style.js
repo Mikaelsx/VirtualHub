@@ -16,6 +16,62 @@ border: 2px solid #496BBA;
 border-radius: 5px; 
 `
 
+// BOX ROW
+export const ButtonRow = styled.TouchableOpacity`
+flex-direction: row;
+gap: 20px;
+`
+
+// BUTTON CIRCLE
+
+export const ButtonCircle = styled.TouchableOpacity`
+width: 44px;
+height: 44px;
+margin: 20px 0px;
+padding: 12px 8px 12px 8px;
+
+align-items: center;
+justify-content: center;
+
+background-color: transparent;
+border: none;
+border-radius: 21px; 
+`
+
+// BUTTON RECTANGLE WHITE
+
+export const ButtonRetangleWhite = styled.TouchableOpacity`
+width: 100px;
+height: 35px;
+margin-bottom: 30px;
+
+align-items: center;
+justify-content: center;
+
+background-color: #FBFBFB;
+border: 2px solid #496BBA;
+border-radius: 5px;
+`
+
+// BUTTON RECTANGLE BLUE
+
+export const ButtonRetangleBlue = styled(ButtonRetangleWhite)`
+background-color: #496BBA;
+border: 2px solid #496BBA;
+border-radius: 5px;
+`
+// BUTTON RECTANGLE - TEXT
+
+export const ButtonRetangleTextBLue = styled.Text`
+font-family: 'MontserratAlternates_600SemiBold';
+font-size: 12px;
+color: #607EC5;
+`
+
+export const ButtonRetangleTextWhite = styled(ButtonRetangleTextBLue)`
+color: white;
+`
+
 // BUTTON
 
 export const ButtonPequeno = styled.TouchableOpacity`
@@ -63,4 +119,22 @@ export const ButtonTitleGoogle = styled.Text`
 font-size: 14px;
 font-family: 'MontserratAlternates_700Bold';
 color: #496BBA;
+`
+
+export const Agenda = styled(Button)`
+align-items: center;
+flex-direction: row;
+gap: 3px;
+justify-content: center;
+width: 100px;
+height: 44px;
+background-color: transparent;
+border: none;
+border-radius: 20px;
+`
+
+export const AgendaBlue = styled(Agenda)`
+background-color: #ECF2FF;
+width: 100px;
+height: 44px;
 `

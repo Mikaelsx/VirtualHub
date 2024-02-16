@@ -2,6 +2,8 @@
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 // IMPORT - TELAS
 
@@ -15,6 +17,7 @@ import { CriarConta } from "./src/screens/CriarConta/CriarConta";
 import { Perfil } from "./src/screens/Perfil/Perfil";
 import { Prontuario } from "./src/screens/Prontuario/Prontuario";
 import { Prescricao } from "./src/screens/Prescricao/Prescricao";
+import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
 
 // IMPORT - FONTS
 
@@ -103,6 +106,11 @@ export default function App() {
           name="Prescricao"
           component={Prescricao}
           options={{ title: "Prescricao" }}
+        />
+        <Stack.Screen
+          name="ConsultasMedico"
+          component={ConsultasMedico}
+          options={{ title: "ConsultasMedico" }}
         />
 
       </Stack.Navigator>

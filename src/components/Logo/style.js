@@ -20,3 +20,41 @@ export const Imag = styled.Image`
 width: 100%;
 height: 100%;
 `
+
+
+export const HeaderBox = styled.View`
+margin-left: 15px;
+margin-top: 10px;
+`
+export const Box = styled.View`
+flex-direction: row;
+margin-top: 35px
+`
+export const HeaderMedico = styled.View`
+background-color: #496BBA;
+width: 100%;
+height: 15%;
+border-radius: 0px 0px 15px 15px;
+`
+export const Sino = styled.View`
+margin-top: 15px;
+margin-right: 15px;
+margin-left: 160px;
+`
+
+export const ImagMedico = styled.Image`
+width: 60px;
+height: 60px;
+border-radius: 10px;
+margin-bottom: 30px;
+margin-left: 30px;
+`
+
+export const ImagBoxPaciente = styled.Image`
+margin-right: 15px;
+width: 77px;
+height: 80px;
+border-radius: 5px;
+/* margin-bottom: 30px;
+margin-left: 30px; */
+`
