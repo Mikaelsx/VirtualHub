@@ -138,3 +138,11 @@ background-color: #ECF2FF;
 width: 100px;
 height: 44px;
 `
+export const ButtonModal = styled(Button)`
+  width:80% ;
+`
+export const ButtonSecondary = styled(Button)`
+  background-color: transparent ;
+  border:none ;
+  margin-bottom:30px ;
+`

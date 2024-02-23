@@ -7,46 +7,59 @@ import { Button, View } from "react-native"
 export const Navegacao = ({navigation}) => {
     return(
         <View>
-            <Button
-            title="Splash"
-            onPress={() => navigation.navigate("Splash")}
-            />
+
             <Button
             title="Login"
             onPress={() => navigation.navigate("Login")}
             />
+
             <Button
-            title="RecuperarSenha"
-            onPress={() => navigation.navigate("RecuperarSenha")}
+            title="Home"
+            onPress={() => navigation.navigate("Home")}
             />
+            
             <Button
-            title="VerificarEmail"
-            onPress={() => navigation.navigate("VerificarEmail")}
-            />
-            <Button
-            title="RedefinirSenha"
-            onPress={() => navigation.navigate("RedefinirSenha")}
-            />
-            <Button
-            title="CriarConta"
-            onPress={() => navigation.navigate("CriarConta")}
-            />
-            <Button
-            title="Perfil"
-            onPress={() => navigation.navigate("Perfil")}
-            />
-            <Button
-            title="Prontuario"
-            onPress={() => navigation.navigate("Prontuario")}
-            />
-            <Button
-            title="Prescricao"
-            onPress={() => navigation.navigate("Prescricao")}
-            />
-            <Button
-            title="ConsultasMedico"
-            onPress={() => navigation.navigate("ConsultasMedico")}
+            title="SelecionarClinica"
+            onPress={() => navigation.navigate("SelecionarClinica")}
             />
         </View>
-    )
+
+)
 }
+// {/* <Button
+// title="Splash"
+// onPress={() => navigation.navigate("Splash")}
+// /> */}
+
+// {/* <Button
+// title="RecuperarSenha"
+// onPress={() => navigation.navigate("RecuperarSenha")}
+// />
+// <Button
+// title="VerificarEmail"
+// onPress={() => navigation.navigate("VerificarEmail")}
+// />
+// <Button
+// title="RedefinirSenha"
+// onPress={() => navigation.navigate("RedefinirSenha")}
+// />
+// <Button
+// title="CriarConta"
+// onPress={() => navigation.navigate("CriarConta")}
+// />
+// <Button
+// title="Perfil"
+// onPress={() => navigation.navigate("Perfil")}
+// />
+// <Button
+// title="Prontuario"
+// onPress={() => navigation.navigate("Prontuario")}
+// />
+// <Button
+// title="Prescricao"
+// onPress={() => navigation.navigate("Prescricao")}
+// />
+// <Button
+// title="ConsultasMedico"
+// onPress={() => navigation.navigate("ConsultasMedico")}
+// /> */}
