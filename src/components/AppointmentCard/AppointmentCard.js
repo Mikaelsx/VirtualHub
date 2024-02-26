@@ -55,7 +55,13 @@ export const AppointmentCard = ({
             <ButtonCard onPress={onPressAppointment}>
               <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
             </ButtonCard>
-          )}
+          ) 
+          //  (
+          //   <ButtonCard onPress={onPressSelect}>
+          //     <ButtonText situacao={situacao}>Agendar consulta</ButtonText>
+          //   </ButtonCard>
+          // )
+          }
         </ViewRow>
       </ContentCard>
     </ContainerCardsList>

@@ -20,6 +20,7 @@ import { Login } from "./src/screens/Login/Login";
 // import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
 import { Home } from "./src/screens/Home/Home";
 import { SelecionarClinica } from "./src/screens/SelecionarClinica/SelecionarClinica";
+import { SelecionarMedico } from "./src/screens/SelecionarMedico/SelecionarMedico";
 
 // IMPORT - FONTS
 
@@ -78,6 +79,12 @@ export default function App() {
       name="SelecionarClinica"
       component={SelecionarClinica}
       options={{ title: "SelecionarClinica" }}
+      />
+
+      <Stack.Screen
+      name="SelecionarMedico"
+      component={SelecionarMedico}
+      options={{ title: "SelecionarMedico" }}
       />
 
       </Stack.Navigator>

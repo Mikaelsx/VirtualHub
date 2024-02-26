@@ -8,6 +8,8 @@ import { ListComponent } from "../../components/List/List";
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
 import { CancelattionModal } from "../../components/CancellationModal/CancellationModal";
 import { ShowModalAppointment } from "../../components/ShowModalAppointment/ShowModalAppointment";
+import { ButtonCard, ButtonText } from "../../components/AppointmentCard/Style";
+import { SelectModal } from "../../components/SelectModal/SelectModal";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -17,13 +19,17 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "cancelado" },
 ];
 
-export const Home = () => {
+export const Home = ({
+  situacao = "pendente",
+  onPressSelect,
+}) => {
   // state para o estado da lista(cards)
   const [statusLista, setStatusLista] = useState("pendente");
 
   // state para a exibição dos modais
   const [showModalCancel, setShowModalCancel] = useState(false);
   const [showModalAppointment, setShowModalAppointment] = useState(false);
+  const [selectModal, setSelectModal] = useState(false);
 
   return (
     <Container>
@@ -75,6 +81,17 @@ export const Home = () => {
         showsVerticalScrollIndicator={false}
       />
 
+
+      {/* botao agendar - fazer */}
+
+      
+      <ButBox>
+      <Button4
+        // situacao={item.situacao}
+        onPressSelect={() => setSelectModal(true)}
+      />
+      </ButBox>
+
       {/* modal cancelar */}
       <CancelattionModal
         visible={showModalCancel}
@@ -87,11 +104,20 @@ export const Home = () => {
         setShowModalCancel={setShowModalAppointment}
       />
 
-      {/* Button */}
-      <ButBox>
+      <SelectModal
+        visible={selectModal}
+        setShowModalCancel={setSelectModal}
+      />
 
-      <Button4/>
-      </ButBox>
+      {/* modal agendamento */}
+        (
+        <ButtonCard onPress={onPressSelect}>
+          <ButtonText situacao={situacao}>Agendar consulta</ButtonText>
+        </ButtonCard>
+         )
+
+      {/* Button */}
+
 
     </Container>
   );
