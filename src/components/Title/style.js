@@ -62,3 +62,11 @@ font-family: 'Quicksand_500Medium';
 color: #4E4B59;
 `
 
+export const SubTitleBlack = styled.Text`
+margin: 15px 0px 10px 20px;
+font-size: 14px;
+font-family: 'Quicksand_600SemiBold';
+color: #000000;
+align-self: flex-start;
+`
+

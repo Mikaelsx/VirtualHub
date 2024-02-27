@@ -30,11 +30,19 @@ export const Select = styled.TouchableOpacity`
 `
 export const SelectMedical = styled(Select)`
 height: 102px;
+width: 90%;
+align-items: center;
+justify-content: center;
+background-color: #FFFFFF;
+flex-direction: row;
+margin-bottom: 20px;
+
+/* border: 2px solid black; */
 `
 
 export const Div = styled.View`
 flex-direction: row;
-justify-content: space-between;
+justify-content: center;
 `
 
 export const Viw = styled.View`
@@ -42,12 +50,14 @@ flex-direction: row;
 `
 export const Box = styled.View`
 flex-direction: column;
+position: relative;
 margin-left: 100px;
+margin-bottom: 0px;
 `
 export const Tox = styled.View`
-flex-direction: column;
+margin-left: 10px;
 justify-content: center;
-align-self: start;
+
 `
 
 export const Cal = styled.View`
@@ -68,10 +78,9 @@ font-size: 16px;
 color: #33303E;
 `
 export const TitleSelect = styled.Text`
-margin: 50px 0px 70px 0px;
+margin: 50px 0px 50px 0px;
 font-size: 20px;
 font-family: 'MontserratAlternates_600SemiBold';
-margin-bottom: 5px;
 color: #33303E;
 `
 export const TextC = styled.Text`

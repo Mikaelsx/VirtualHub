@@ -10,6 +10,10 @@ import { CancelattionModal } from "../../components/CancellationModal/Cancellati
 import { ShowModalAppointment } from "../../components/ShowModalAppointment/ShowModalAppointment";
 import { ButtonCard, ButtonText } from "../../components/AppointmentCard/Style";
 import { SelectModal } from "../../components/SelectModal/SelectModal";
+import { Button } from "../../components/Button/style";
+import { AppointmentButton } from "../../components/AppointmentButton/AppointmentButton";
+
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -84,13 +88,27 @@ export const Home = ({
 
       {/* botao agendar - fazer */}
 
+      <ButBox
+        data={Consultas}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) =>
+        statusLista == item.situacao && (
+          <Button4
+          situacao={item.situacao}
+          onPressSelect={() => setSelectModal(true)}
+        />
+        )
+        }
+        showsVerticalScrollIndicator={false}
+      />
+
       
-      <ButBox>
+      {/* <ButBox>
       <Button4
         // situacao={item.situacao}
         onPressSelect={() => setSelectModal(true)}
       />
-      </ButBox>
+      </ButBox> */}
 
       {/* modal cancelar */}
       <CancelattionModal
@@ -110,13 +128,18 @@ export const Home = ({
       />
 
       {/* modal agendamento */}
-        (
+        {/* (
         <ButtonCard onPress={onPressSelect}>
           <ButtonText situacao={situacao}>Agendar consulta</ButtonText>
         </ButtonCard>
-         )
+         ) */}
 
       {/* Button */}
+      <ButBox>
+      <Button4 onPress={() => setSelectModal(true)}>
+      <FontAwesome5 name="hand-holding-medical" size={20} color="white" />
+      </Button4>
+      </ButBox>
 
 
     </Container>

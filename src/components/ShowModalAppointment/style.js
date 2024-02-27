@@ -6,6 +6,11 @@ export const PatientModal = styled.View`
     justify-content:center ;
     background-color: rgba(0, 0, 0, 0.60) ;
 `
+export const AgendarModal = styled.View`
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.60) ;
+    justify-content: flex-end;
+`
 export const ImageModal = styled.Image`
     width: 100%;
     height: 180px;
@@ -17,6 +22,14 @@ export const ImageModal = styled.Image`
 export const ModalContent = styled.View`
     padding: 30px 30px 10px ;
     width:  90%;
+    border-radius: 10px ;
+    background-color:#fff ;
+    align-items:center ;
+`
+export const ModalRetagle = styled.View`
+    padding: 30px 30px 10px ;
+    width:  100%;
+    height: 80%;
     border-radius: 10px ;
     background-color:#fff ;
     align-items:center ;

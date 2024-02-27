@@ -24,12 +24,32 @@ export const SelecionarMedico = () => {
         <TitleSelect>Selecionar Medico</TitleSelect>
         
         <SelectMedical>
-            <Tox>
                 <SelectMedicalImage source={require('../../assets/Doutor.png')}/>
-            </Tox>
-            <Box>
+            <Tox>
                 <TitleCLin>Dra Alessandra</TitleCLin>
                 <SubTitle>Demartologa, Esteticista</SubTitle>
+            </Tox>
+            <Box>
+            </Box>
+        </SelectMedical>
+
+        <SelectMedical>
+                <SelectMedicalImage source={require('../../assets/Doutor.png')}/>
+            <Tox>
+                <TitleCLin>Dra Alessandra</TitleCLin>
+                <SubTitle>Demartologa, Esteticista</SubTitle>
+            </Tox>
+            <Box>
+            </Box>
+        </SelectMedical>
+        
+        <SelectMedical>
+                <SelectMedicalImage source={require('../../assets/Doutor.png')}/>
+            <Tox>
+                <TitleCLin>Dra Alessandra</TitleCLin>
+                <SubTitle>Demartologa, Esteticista</SubTitle>
+            </Tox>
+            <Box>
             </Box>
         </SelectMedical>
 
