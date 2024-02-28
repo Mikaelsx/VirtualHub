@@ -4,7 +4,7 @@ export const FilterAppointment = styled.View`
     width:90% ;
     flex-direction:row ;
     justify-content: space-between ;
-    margin-top: 38px ;
+    margin-top: 15px ;
 `
 export const Appointment = styled.View`
     width:90% ;
@@ -12,7 +12,7 @@ export const Appointment = styled.View`
     justify-content: space-between ;
 `
 export const MargT = styled.View`
-margin-top: 200px;
+    margin-top: 200px;
 `
 
 export const Button4 = styled.TouchableOpacity`
@@ -25,7 +25,16 @@ export const Button4 = styled.TouchableOpacity`
     justify-content: center;
 `
 
-export const ButBox = styled.TouchableOpacity`
+export const ButBox = styled.View`
+    background-color: transparent;
     justify-content: end;
     align-self: flex-end;
+    display: flex;
+    position: relative;
+`
+
+export const Rodape = styled.SafeAreaView`
+width: 100%;
+height: 40px;
+background-color: #FFFFFF;
 `

@@ -1,19 +1,16 @@
 import { useState } from "react";
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
-import { CalendarList } from "../../components/Calendar/CalendarList";
 import { Container } from "../../components/Container/style";
 import { Header } from "../../components/Header/Header";
-import { ButBox, Button4, FilterAppointment } from "./style";
+import { ButBox, Button4, FilterAppointment, Rodape } from "./style";
 import { ListComponent } from "../../components/List/List";
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
 import { CancelattionModal } from "../../components/CancellationModal/CancellationModal";
 import { ShowModalAppointment } from "../../components/ShowModalAppointment/ShowModalAppointment";
-import { ButtonCard, ButtonText } from "../../components/AppointmentCard/Style";
 import { SelectModal } from "../../components/SelectModal/SelectModal";
-import { Button } from "../../components/Button/style";
-import { AppointmentButton } from "../../components/AppointmentButton/AppointmentButton";
 
 import { FontAwesome5 } from '@expo/vector-icons';
+import CalendarList from "../../components/Calendar/CalendarList";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -23,10 +20,7 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "cancelado" },
 ];
 
-export const Home = ({
-  situacao = "pendente",
-  onPressSelect,
-}) => {
+export const Home = () => {
   // state para o estado da lista(cards)
   const [statusLista, setStatusLista] = useState("pendente");
 
@@ -40,8 +34,8 @@ export const Home = ({
       {/* Header */}
       <Header />
 
-      {/* Calendário */}
-      {/* <CalendarList /> */}
+      {/* ERRO AQUIIIIII */}
+      <CalendarList/>
 
       {/* Filtros (botões) */}
       {/* Container */}
@@ -88,7 +82,7 @@ export const Home = ({
 
       {/* botao agendar - fazer */}
 
-      <ButBox
+      {/* <ButBox
         data={Consultas}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
@@ -100,7 +94,7 @@ export const Home = ({
         )
         }
         showsVerticalScrollIndicator={false}
-      />
+      /> */}
 
       
       {/* <ButBox>
@@ -140,6 +134,10 @@ export const Home = ({
       <FontAwesome5 name="hand-holding-medical" size={20} color="white" />
       </Button4>
       </ButBox>
+
+      <Rodape>
+        
+      </Rodape>
 
 
     </Container>

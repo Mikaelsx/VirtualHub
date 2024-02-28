@@ -16,6 +16,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Button } from "../Button/style"
 import { ButtonTitle } from "../ButtonTitle/style"
+import { SpaceButton } from "../../screens/SelecionarMedico/style"
 
 
 export const ButtonSelectClinic = () => {
@@ -94,6 +95,8 @@ export const ButtonSelectClinic = () => {
                 </Cal>
             </Div>
         </Select>
+
+        <SpaceButton></SpaceButton>
 
         <Button>
             <ButtonTitle>EDITAR</ButtonTitle>

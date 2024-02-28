@@ -40,6 +40,11 @@ margin-bottom: 20px;
 /* border: 2px solid black; */
 `
 
+export const SpaceButton = styled.View`
+justify-content: center;
+width: 100%;
+height: 100px;
+`
 export const Div = styled.View`
 flex-direction: row;
 justify-content: center;

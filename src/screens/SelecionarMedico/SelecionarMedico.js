@@ -1,5 +1,5 @@
 import { Container } from "../../components/Container/style"
-import { Box, Cal, CancPac, Con, LinkSelect, SelectMedical, SelectMedicalImage, TitleSelect, Tox } from "./style"
+import { Box, Cal, CancPac, Con, LinkSelect, SelectMedical, SelectMedicalImage, SpaceButton, TitleSelect, Tox } from "./style"
 import { Viw } from "./style"
 import { Div } from "./style"
 import { Select } from "./style"    
@@ -53,6 +53,7 @@ export const SelecionarMedico = () => {
             </Box>
         </SelectMedical>
 
+        <SpaceButton></SpaceButton>
 
         <Button>
             <ButtonTitle>EDITAR</ButtonTitle>
