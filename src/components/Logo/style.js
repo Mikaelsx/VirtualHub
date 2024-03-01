@@ -13,7 +13,11 @@ align-items: center;
 export const UseHeader = styled.Image`
 width: 100%;
 height: 300px;
-
+`
+export const UseMap = styled.Image`
+width: 100%;
+height: 360px;
+/* margin-bottom: 50px; */
 `
 
 export const Imag = styled.Image`

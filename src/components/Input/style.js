@@ -71,6 +71,19 @@ font-size: 16px;
 font-family: 'MontserratAlternates_600SemiBold';
 `
 
+export const InputPaciente2 = styled(InputPaciente)`
+width: 40%;
+height: 53px;
+
+background-color: #F5F3F3;
+margin: 0px 15px;
+border: none;
+border-radius: 5px; 
+
+font-size: 14px;
+font-family: 'MontserratAlternates_500Medium';
+`
+
 // INPUT - LINE 
 
 export const InputLine = styled(Input)`

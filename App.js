@@ -10,18 +10,19 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Navegacao } from "./src/screens/Navegacao/Navegacao";
 // import { Splash } from "./src/screens/Splash/Splash";
 import { Login } from "./src/screens/Login/Login";
-// import { RecuperarSenha } from "./src/screens/RecuperarSenha/RecuperarSenha";
-// import { VerificarEmail } from "./src/screens/VerificarEmail/VerificarEmail";
-// import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
-// import { CriarConta } from "./src/screens/CriarConta/CriarConta";
-// import { Perfil } from "./src/screens/Perfil/Perfil";
-// import { Prontuario } from "./src/screens/Prontuario/Prontuario";
-// import { Prescricao } from "./src/screens/Prescricao/Prescricao";
-// import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
+import { RecuperarSenha } from "./src/screens/RecuperarSenha/RecuperarSenha";
+import { VerificarEmail } from "./src/screens/VerificarEmail/VerificarEmail";
+import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
+import { CriarConta } from "./src/screens/CriarConta/CriarConta";
+import { Perfil } from "./src/screens/Perfil/Perfil";
+import { Prontuario } from "./src/screens/Prontuario/Prontuario";
+import { Prescricao } from "./src/screens/Prescricao/Prescricao";
+import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
 import { Home } from "./src/screens/Home/Home";
 import { SelecionarClinica } from "./src/screens/SelecionarClinica/SelecionarClinica";
 import { SelecionarMedico } from "./src/screens/SelecionarMedico/SelecionarMedico";
 import { SelecionarData } from "./src/screens/SelecionarData/SelecionarData";
+import { ConfirmarLocal } from "./src/screens/ConfirmarLocal/ConfirmarLocal";
 
 // IMPORT - FONTS
 
@@ -94,6 +95,53 @@ export default function App() {
       options={{ title: "SelecionarData" }}
       />
 
+      <Stack.Screen
+      name="ConfirmarLocal"
+      component={ConfirmarLocal}
+      options={{ title: "ConfirmarLocal" }}
+      />
+
+     <Stack.Screen
+           name="RecuperarSenha"
+           component={RecuperarSenha}
+         options={{ title: "Recuperar Senha" }}
+         />
+         <Stack.Screen
+           name="VerificarEmail"
+           component={VerificarEmail}
+           options={{ title: "Verificar Email" }}
+         />
+         <Stack.Screen
+           name="RedefinirSenha"
+           component={RedefinirSenha}
+           options={{ title: "Redefinir Senha" }}
+         />
+         <Stack.Screen
+           name="CriarConta"
+           component={CriarConta}
+           options={{ title: "Criar Conta" }}
+         />
+    <Stack.Screen
+           name="Perfil"
+           component={Perfil}
+           options={{ title: "Perfil" }}
+         />
+         <Stack.Screen
+           name="Prontuario"
+           component={Prontuario}
+           options={{ title: "Prontuario" }}
+         />
+         <Stack.Screen
+           name="Prescricao"
+           component={Prescricao}
+           options={{ title: "Prescricao" }}
+         />
+         <Stack.Screen
+           name="ConsultasMedico"
+           component={ConsultasMedico}
+           options={{ title: "ConsultasMedico" }}
+         />
+
       </Stack.Navigator>
     </NavigationContainer>
 
@@ -103,45 +151,6 @@ export default function App() {
         //   options={{ title: "Splash" }}
         // /> */}
 
-        //     {/* <Stack.Screen
-        //   name="RecuperarSenha"
-        //   component={RecuperarSenha}
-        //   options={{ title: "Recuperar Senha" }}
-        // />
-        // <Stack.Screen
-        //   name="VerificarEmail"
-        //   component={VerificarEmail}
-        //   options={{ title: "Verificar Email" }}
-        // />
-        // <Stack.Screen
-        //   name="RedefinirSenha"
-        //   component={RedefinirSenha}
-        //   options={{ title: "Redefinir Senha" }}
-        // />
-        // <Stack.Screen
-        //   name="CriarConta"
-        //   component={CriarConta}
-        //   options={{ title: "Criar Conta" }}
-        // />
-        // <Stack.Screen
-        //   name="Perfil"
-        //   component={Perfil}
-        //   options={{ title: "Perfil" }}
-        // />
-        // <Stack.Screen
-        //   name="Prontuario"
-        //   component={Prontuario}
-        //   options={{ title: "Prontuario" }}
-        // />
-        // <Stack.Screen
-        //   name="Prescricao"
-        //   component={Prescricao}
-        //   options={{ title: "Prescricao" }}
-        // />
-        // <Stack.Screen
-        //   name="ConsultasMedico"
-        //   component={ConsultasMedico}
-        //   options={{ title: "ConsultasMedico" }}
-        // /> */}
+
   );
 }

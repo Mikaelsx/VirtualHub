@@ -8,6 +8,26 @@ align-items: center;
 background-color: #FBFBFB;
 `
 
+export const Med = styled.View.attrs({
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+    
+    elevation: 24,
+})`
+flex: 1;
+width: 100%;
+align-items: center;
+background-color: #FBFBFB;
+/* border: 2px solid black; */
+border-radius: 20px 20px 0px 0px;
+overflow: 'hidden';
+`
+
 export const ContainerPaciente = styled.SafeAreaView`
 width: 100%;
 height: 102px;
@@ -65,6 +85,8 @@ flex-direction: row;
 
 export const BoxRow = styled.View`
 flex-direction: row;
+align-items: center;
+justify-content: center;
 `
 
 export const BoxRed = styled.View`
@@ -85,6 +107,11 @@ border-radius: 5px;
 `
 
 export const SubTitleBoxRow = styled.View`
-
+flex-direction: row;
+justify-content: center;
+align-self: flex-start;
+margin-left: 30px;
+margin-top: 20px;
+gap: 150px;
 `
 

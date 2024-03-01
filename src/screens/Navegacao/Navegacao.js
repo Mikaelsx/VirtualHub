@@ -32,44 +32,50 @@ export const Navegacao = ({navigation}) => {
             title="SelecionarData"
             onPress={() => navigation.navigate("SelecionarData")}
             />
-        </View>
+            
+            <Button
+            title="ConfirmarLocal"
+            onPress={() => navigation.navigate("ConfirmarLocal")}
+            />
 
-)
-}
-// {/* <Button
+{/* // <Button
 // title="Splash"
 // onPress={() => navigation.navigate("Splash")}
 // /> */}
 
-// {/* <Button
-// title="RecuperarSenha"
-// onPress={() => navigation.navigate("RecuperarSenha")}
-// />
-// <Button
-// title="VerificarEmail"
-// onPress={() => navigation.navigate("VerificarEmail")}
-// />
-// <Button
-// title="RedefinirSenha"
-// onPress={() => navigation.navigate("RedefinirSenha")}
-// />
-// <Button
-// title="CriarConta"
-// onPress={() => navigation.navigate("CriarConta")}
-// />
-// <Button
-// title="Perfil"
-// onPress={() => navigation.navigate("Perfil")}
-// />
-// <Button
-// title="Prontuario"
-// onPress={() => navigation.navigate("Prontuario")}
-// />
-// <Button
-// title="Prescricao"
-// onPress={() => navigation.navigate("Prescricao")}
-// />
-// <Button
-// title="ConsultasMedico"
-// onPress={() => navigation.navigate("ConsultasMedico")}
-// /> */}
+ <Button
+ title="RecuperarSenha"
+ onPress={() => navigation.navigate("RecuperarSenha")}
+ />
+ <Button
+ title="VerificarEmail"
+ onPress={() => navigation.navigate("VerificarEmail")}
+ />
+ <Button
+ title="RedefinirSenha"
+ onPress={() => navigation.navigate("RedefinirSenha")}
+ />
+ <Button
+ title="CriarConta"
+ onPress={() => navigation.navigate("CriarConta")}
+ />
+ <Button
+ title="Perfil"
+ onPress={() => navigation.navigate("Perfil")}
+ />
+ <Button
+ title="Prontuario"
+ onPress={() => navigation.navigate("Prontuario")}
+/>
+ <Button
+ title="Prescricao"
+ onPress={() => navigation.navigate("Prescricao")}
+ />
+ <Button
+ title="ConsultasMedico"
+ onPress={() => navigation.navigate("ConsultasMedico")}
+ />
+        </View>
+
+)
+}

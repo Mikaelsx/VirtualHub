@@ -1,23 +1,26 @@
-import { TitleSelect } from "../../components/ButtonSelectClinic/style"
-import { Container } from "../../components/Container/style"
-
-import Picker from "react-native-picker-select";
-import { SubTitle, SubTitleBlack } from "../../components/Title/style";
-import { Button, ButtonModal, ButtonSecondary, ButtonTitle } from "../../components/Button/style";
-import { SpaceButton } from "../SelecionarMedico/style";
+import { useState } from "react";
 import { StyleSheet } from "react-native";
+import { Container } from "../../components/Container/style";
+import { SubTitleBlack, Title } from "../../components/Title/style";
+import Picker from "react-native-picker-select";
+import { ConfirmarConsutaModal } from "../../components/ConfirmarConsutaModal/ConfirmarConsutaModal";
+import { ButtonModal, ButtonSecondary } from "../../components/Button/style";
+import { ButtonSecundaryTitle, ButtonTitle } from "../../components/ButtonTitle/style";
 import { PickerBox } from "./style";
-import { MargT } from "../Home/style";
-import { ButtonSecundaryTitle } from "../../components/ButtonTitle/style";
+import CalendarSelectData from "../../components/CalendarSelectData/CalendarSelectData";
 
-import CalendarSelectData from '../../components/CalendarSelectData/CalendarSelectData'
+import CalendarList from "../../components/Calendar/CalendarList";
 
 export const SelecionarData = () => {
+    // const [statusLista, setStatusLista] = useState("pendente");
+
+    const [confConsultaModal, setConfConsultaModal] = useState(false);
     return(
 
         <Container>
-        <TitleSelect>Selecionar Data</TitleSelect>
-
+        <Title>Selecionar Data</Title>
+        
+        {/* <CalendarList/> */}
         <CalendarSelectData/>
 
         <SubTitleBlack>Selecione um horário disponível</SubTitleBlack>
@@ -40,9 +43,16 @@ export const SelecionarData = () => {
         ]}
         />
         </PickerBox>
+
+        <ConfirmarConsutaModal
+        visible={confConsultaModal}
+        setShowModalCancel={setConfConsultaModal}
+        />
+
+
   
-        <ButtonModal>
-            <ButtonTitle>Continuar</ButtonTitle>
+        <ButtonModal onPress={() => setConfConsultaModal(true)}>
+            <ButtonTitle>Confirmar</ButtonTitle>
         </ButtonModal>
 
         <ButtonSecondary onPress={() => setShowModalCancel(false)}>
@@ -50,15 +60,10 @@ export const SelecionarData = () => {
         </ButtonSecondary>
 
         </Container>
-
-
-        
         
         // <Container>
         //     <TitleSelect>Selecionar Data</TitleSelect>
         // </Container>
-
-        
     )
 }
 const styles = StyleSheet.create({

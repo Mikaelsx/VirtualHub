@@ -5,6 +5,9 @@ import moment from "moment";
 
 // import component StyledCalendarStrip
 import { StyledCalendarStrip } from './style';
+// import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+
+import { Calendar, LocaleConfig } from "react-native-calendars";
 
 //import fonts
 import { useFonts, MontserratAlternates_600SemiBold } from '@expo-google-fonts/montserrat-alternates';
