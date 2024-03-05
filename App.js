@@ -29,6 +29,7 @@ import { ConfirmarLocal } from "./src/screens/ConfirmarLocal/ConfirmarLocal";
 import { useFonts, MontserratAlternates_500Medium, MontserratAlternates_600SemiBold, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
 import { Quicksand_400Regular ,Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
 import { View } from "react-native";
+import { Main } from "./src/screens/Main/Main";
 
 
 const Stack = createNativeStackNavigator();
@@ -60,17 +61,22 @@ export default function App() {
 
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen
+        <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ title: "Login" }}
+        />
+      {/* <Stack.Screen
       name="Navegacao"
       component={Navegacao}
       options={{ title: "Navegação" }}
+      /> */}
+      <Stack.Screen
+      name="Main"
+      component={Main}
+      options={{ title: "Main" }}
       />
 
-      <Stack.Screen
-      name="Login"
-      component={Login}
-      options={{ title: "Login" }}
-      />
       <Stack.Screen
       name="Home"
       component={Home}

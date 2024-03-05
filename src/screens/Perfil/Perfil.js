@@ -20,14 +20,14 @@ export const Perfil = () => {
         <Container>
         
         {/* IMAGEM DO PACIENTE */}
-            <UseHeader source={require('../../assets/Paciente.png')}></UseHeader>
+            <UseHeader source={{ uri: "https://github.com/Mikaelsx.png" }}></UseHeader>
 
         {/* CAIXA QUE CONTEM O NOME E O EMAIL */}
             <SubTitleBox>
 
-            <Title>Richard Kosta</Title>
+            <Title>Mikael Souza</Title>
 
-            <SubTitle>richard.kosta@gmail.com</SubTitle>
+            <SubTitle>MikaelSouza@gmail.com</SubTitle>
 
             </SubTitleBox>
         

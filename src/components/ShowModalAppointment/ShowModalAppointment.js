@@ -6,7 +6,7 @@ import { ButtonModal, ButtonSecondary } from "../Button/style";
 import { BoxRow } from "../Container/style";
 import { ProfileImage } from "../AppointmentCard/Style";
 
-export const ShowModalAppointment = ({ visible, setShowModalCancel, ...rest }) => {
+export const ShowModalAppointment = ({visible, setShowModalCancel, ...rest }) => {
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
       <PatientModal>

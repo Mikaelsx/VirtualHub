@@ -23,7 +23,7 @@ export const Header = () => {
 
             <Box>
 
-            <ImagMedico source={require('../../assets/Doutor.png')}/>
+            <ImagMedico source={{ uri: "https://github.com/Mikaelsx.png" }}/>
 
             <HeaderBox>
             <TitleConsulta>Bem vindo</TitleConsulta>

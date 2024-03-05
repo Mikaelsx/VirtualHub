@@ -15,11 +15,11 @@ import Back from "../../components/Back/style"
 
 // EXPORT
 
-export const RecuperarSenha = () => {
+export const RecuperarSenha = ({ navigation }) => {
     return(
         <Container>
 
-            <Ionicons  style={Back.seta} name="arrow-back-circle-outline" size={40} color="#34898F" onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}} />
+            <Ionicons  style={Back.seta} name="arrow-back-circle-outline" size={40} color="#34898F" onPress={ () => {navigation.replace("Login")}} />
 
             <Logo source={require('../../assets/Logo.png')} />
 
@@ -35,7 +35,7 @@ export const RecuperarSenha = () => {
 
             <Input placeholder={'Usuário ou E-mail'}/>
 
-            <Button>
+            <Button onPress={ () => {navigation.replace("VerificarEmail")}}>
                 <ButtonTitle>CONTINUAR</ButtonTitle>
             </Button>
 

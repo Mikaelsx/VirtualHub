@@ -22,7 +22,7 @@ export const AppointmentCard = ({
   return (
     // container principal
     <ContainerCardsList>
-      <ProfileImage source={{ uri: "https://github.com/MikaelSX.png" }} />
+      <ProfileImage source={{ uri: "https://github.com/Mikaelsx.png" }} />
 
       <ContentCard>
         <DataProfileCard>

@@ -18,7 +18,11 @@ import { AntDesign } from '@expo/vector-icons';
 
 // EXPORT
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
     return(
         <Container>
             <Logo source={require('../../assets/Logo.png')} />
@@ -32,10 +36,10 @@ export const Login = () => {
             placeholder={'Senha'}
             />
 
-            <LinkMedium onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={ () => {navigation.replace("RecuperarSenha")}}>Esqueceu sua senha?</LinkMedium>
 
 
-            <Button>
+            <Button onPress={(e) => Login()}>
                 <ButtonTitle>ENTRAR</ButtonTitle>
             </Button>
 
@@ -47,7 +51,7 @@ export const Login = () => {
 
             <ContentAccount>
                 <TextAccount>Não tem conta?</TextAccount>
-                <LinkAccount onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}>Crie uma conta agora!</LinkAccount>
+                <LinkAccount onPress={ () => {navigation.replace("CriarConta")}}>Crie uma conta agora!</LinkAccount>
             </ContentAccount>
             
         </Container>

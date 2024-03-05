@@ -14,7 +14,7 @@ import { Linking } from "react-native"
 
 // EXPORT
 
-export const CriarConta = () => {
+export const CriarConta = ({ navigation }) => {
     return(
         <Container>
 
@@ -39,7 +39,7 @@ export const CriarConta = () => {
                 <ButtonTitle>CONFIRMAR NOVA SENHA</ButtonTitle>
             </Button>
 
-            <LinkAccount onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}>Cancelar</LinkAccount>
+            <LinkAccount onPress={ () => {navigation.replace("Login")}}>Cancelar</LinkAccount>
             
         </Container>
     )

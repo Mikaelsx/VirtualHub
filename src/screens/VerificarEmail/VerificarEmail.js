@@ -14,9 +14,10 @@ import { LinkAccount } from "../../components/Link/style"
 import Back from "../../components/Back/style"
 import { AntDesign } from '@expo/vector-icons';
 import { Linking } from "react-native"
-import { Link } from "@react-navigation/native"
 
-export const VerificarEmail = () => {
+// EXPORT
+
+export const VerificarEmail = ({ navigation }) => {
     return(
         <Container>
 
@@ -25,7 +26,7 @@ export const VerificarEmail = () => {
             Go to Jane's profile
             </Link> */}
 
-            <AntDesign style={Back.seta} name="closecircleo" size={30} color="#34898F" onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}/>
+            <AntDesign style={Back.seta} name="closecircleo" size={30} color="#34898F" onPress={ () => {navigation.replace("Login")}}/>
 
             <Logo source={require('../../assets/Logo.png')} />
 
@@ -47,7 +48,7 @@ export const VerificarEmail = () => {
             
             </InputBox>
 
-            <Button>
+            <Button onPress={ () => {navigation.replace("RedefinirSenha")}}>
                 <ButtonTitle>ENTRAR</ButtonTitle>
             </Button>
 

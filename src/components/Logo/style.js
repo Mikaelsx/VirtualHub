@@ -34,7 +34,17 @@ export const Box = styled.View`
 flex-direction: row;
 margin-top: 35px
 `
-export const HeaderMedico = styled.View`
+export const HeaderMedico = styled.View.attrs({
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+
+    elevation: 34,
+})`
 background-color: #496BBA;
 width: 100%;
 height: 15%;

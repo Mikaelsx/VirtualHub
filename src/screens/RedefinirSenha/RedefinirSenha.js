@@ -10,13 +10,13 @@ import { Linking } from "react-native"
 import { AntDesign } from '@expo/vector-icons';
 import Back from "../../components/Back/style"
 
-// EXPORTS
+// EXPORT
 
-export const RedefinirSenha = () => {
+export const RedefinirSenha = ({ navigation }) => {
     return(
         <Container>
 
-            <AntDesign style={Back.seta} name="closecircleo" size={30} color="#34898F" onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}/>
+            <AntDesign style={Back.seta} name="closecircleo" size={30} color="#34898F" onPress={ () => {navigation.replace("Login")}}/>
 
             <Logo source={require('../../assets/Logo.png')} />
 

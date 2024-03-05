@@ -16,6 +16,8 @@ export const MargT = styled.View`
 `
 
 export const Button4 = styled.TouchableOpacity`
+    justify-content: end;
+    align-self: flex-end;
     width: 60px;
     height: 60px;
     border-radius: 7px;
