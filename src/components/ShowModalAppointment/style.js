@@ -17,6 +17,7 @@ export const ImageModal = styled.Image`
     margin: 10px 0px 10px 0px;
     align-items: center ;
     justify-content:center ;
+    border-radius: 10px;
     /* background-color: rgba(0, 0, 0, 0.60) ; */
 `
 export const ModalContent = styled.View`

@@ -6,20 +6,30 @@ import { ButtonModal, ButtonSecondary } from "../Button/style";
 import { BoxRow } from "../Container/style";
 import { ProfileImage } from "../AppointmentCard/Style";
 
-export const ShowModalAppointment = ({visible, setShowModalCancel, ...rest }) => {
+export const ShowModalAppointment = ({navigation, visible, setShowModalCancel, ...rest }) => {
+  
+  // const prontuario = () => {
+    
+  // }
+  //  AQUI
+  //  TypeError: Cannot read property 'replace' of undefined, js engine: hermes
+  const onBass = () => {
+    navigation.replace("RecuperarSenha")
+  }
+
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
       <PatientModal>
         <ModalContent>
 
-          <ImageModal source={{ uri: "https://github.com/MikaelSx.png" }} />
+          <ImageModal source={{ uri: "https://github.com/Mikaelsx.png" }} />
           <Title>Mikael Souza</Title>
 
           <BoxRow>
             <SubTitle>16 Anos</SubTitle>
           </BoxRow>
 
-          <ButtonModal>
+          <ButtonModal onPress={onBass}>
             <ButtonTitle>Inserir prontuário</ButtonTitle>
           </ButtonModal>
 

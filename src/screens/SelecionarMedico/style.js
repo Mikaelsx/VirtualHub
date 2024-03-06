@@ -28,7 +28,17 @@ export const Select = styled.TouchableOpacity`
         border: 2px solid #607ec5 ;
     `} */
 `
-export const SelectMedical = styled(Select)`
+export const SelectMedical = styled(Select).attrs({
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 9,
+    },
+    shadowOpacity: 0.48,
+    shadowRadius: 11.95,
+
+    elevation: 18,
+})`
 height: 102px;
 width: 90%;
 align-items: center;
