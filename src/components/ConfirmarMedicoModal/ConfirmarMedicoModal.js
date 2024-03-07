@@ -12,7 +12,7 @@ import { Input } from "../Input/style";
 import { BoxDiver, BoxFonts, BoxTit, ConfirmarModal, H1, H2, H3, ImageMedicalModal, ModalAgendConsul } from "./style";
 import { UseHeader } from "../Logo/style";
 
-export const ConfirmarMedicoModal = ({ visible, setShowModalCancel, ...rest }) => {
+export const ConfirmarMedicoModal = ({navigation, visible, setShowModalCancel, ...rest }) => {
 
     return(
       
@@ -30,7 +30,7 @@ export const ConfirmarMedicoModal = ({ visible, setShowModalCancel, ...rest }) =
           <SubTitle>CRM-15286</SubTitle>
           </SubTitleRow>
 
-            <ButtonModal >
+            <ButtonModal onPress={ () => {navigation.replace("ConfirmarLocal")}}>
               <ButtonTitle>Ver Local Da Consulta</ButtonTitle>
             </ButtonModal>
   

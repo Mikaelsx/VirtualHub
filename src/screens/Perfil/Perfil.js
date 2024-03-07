@@ -12,10 +12,14 @@ import { SubTitle } from "../../components/Title/style"
 import { SubTitleBox } from "../../components/Title/style"
 import { Button } from "../../components/Button/style"
 import { ButtonTitle } from "../../components/Button/style"
+import { useState } from "react"
+import { ConfirmarMedicoModal } from "../../components/ConfirmarMedicoModal/ConfirmarMedicoModal"
 
 
 
 export const Perfil = () => {
+  const [confMedicoModal, setConfMedicoModal] = useState(false);
+
     return(
         <Container>
         
@@ -68,9 +72,15 @@ export const Perfil = () => {
 
             </InputBox>
 
+            <ConfirmarMedicoModal
+            navigation={navigation}
+            visible={confMedicoModal}
+            setShowModalCancel={setConfMedicoModal}
+            />
+
         {/* BOTÕES */}
 
-            <Button>
+            <Button onPress={() => setConfMedicoModal(true)}>
                 <ButtonTitle>SALVAR</ButtonTitle>
             </Button>
 

@@ -27,7 +27,7 @@ export const Header = () => {
 
             <HeaderBox>
             <TitleConsulta>Bem vindo</TitleConsulta>
-            <TitleWhite>Dr.Claudio</TitleWhite>
+            <TitleWhite>Mikael.S</TitleWhite>
             </HeaderBox>
             
             <Sino>

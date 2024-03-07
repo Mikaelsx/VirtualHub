@@ -13,12 +13,15 @@ import {
   TextBold,
   ViewRow,
 } from "./Style";
+import { useState } from "react";
 
 export const AppointmentCard = ({
+  navigation,
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
 }) => {
+  const [profile, setProfile] = useState("Paciente")
   return (
     // container principal
     <ContainerCardsList>
@@ -52,7 +55,7 @@ export const AppointmentCard = ({
               <ButtonText situacao={situacao}>Cancelar</ButtonText>
             </ButtonCard>
           ) : (
-            <ButtonCard onPress={onPressAppointment}>
+            <ButtonCard onPress={profile !== "Paciente" ? onConnectAppointment : () => navigation.replace("Prontuario")}>
               <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
             </ButtonCard>
           ) 

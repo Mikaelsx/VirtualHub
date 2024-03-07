@@ -19,7 +19,7 @@ import { ButtonTitle } from "../ButtonTitle/style"
 import { SpaceButton } from "../../screens/SelecionarMedico/style"
 
 
-export const ButtonSelectClinic = () => {
+export const ButtonSelectClinic = ({navigation}) => {
     return(
         <Container>
         <TitleSelect>Selecionar Clinica</TitleSelect>
@@ -98,12 +98,12 @@ export const ButtonSelectClinic = () => {
 
         <SpaceButton></SpaceButton>
 
-        <Button>
-            <ButtonTitle>EDITAR</ButtonTitle>
+        <Button onPress={ () => {navigation.replace("SelecionarMedico")}}>
+            <ButtonTitle>Continuar</ButtonTitle>
         </Button>
 
             
-        <CancPac onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}>Cancelar</CancPac>
+        <CancPac onPress={ () => {navigation.replace("Main")}}>Cancelar</CancPac>
 
     </Container>
     )

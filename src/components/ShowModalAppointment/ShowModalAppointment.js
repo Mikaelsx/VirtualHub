@@ -1,21 +1,14 @@
 import { Modal } from "react-native";
 import { SubTitle, Title } from "../Title/style";
-import { ImageModal, ModalContent, ModalText, PatientModal } from "./style";
+import { ImageModal, ModalContent, PatientModal } from "./style";
 import { ButtonSecundaryTitle, ButtonTitle } from "../ButtonTitle/style";
 import { ButtonModal, ButtonSecondary } from "../Button/style";
 import { BoxRow } from "../Container/style";
-import { ProfileImage } from "../AppointmentCard/Style";
 
-export const ShowModalAppointment = ({navigation, visible, setShowModalCancel, ...rest }) => {
-  
-  // const prontuario = () => {
-    
-  // }
+export const ShowModalAppointment = ({visible, setShowModalCancel, ...rest }) => {
+
   //  AQUI
   //  TypeError: Cannot read property 'replace' of undefined, js engine: hermes
-  const onBass = () => {
-    navigation.replace("RecuperarSenha")
-  }
 
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
@@ -29,7 +22,7 @@ export const ShowModalAppointment = ({navigation, visible, setShowModalCancel, .
             <SubTitle>16 Anos</SubTitle>
           </BoxRow>
 
-          <ButtonModal onPress={onBass}>
+          <ButtonModal>
             <ButtonTitle>Inserir prontuário</ButtonTitle>
           </ButtonModal>
 

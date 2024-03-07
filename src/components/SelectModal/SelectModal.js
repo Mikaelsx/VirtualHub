@@ -10,12 +10,13 @@ import { useState } from "react";
 import { BtnConsultaAppointment } from "../BtnConsultaAppointment/BtnConsultaAppointment";
 import { Input } from "../Input/style";
 
-export const SelectModal = ({ visible, setShowModalCancel, ...rest }) => {
+export const SelectModal = ({navigation, visible, setShowModalCancel, ...rest }) => {
+  const [profile, setProfile] = useState("Paciente")
   const [statusLista, setStatusLista] = useState("pendente");
 
     return(
       
-        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+        <Modal {...rest} visible={visible} transparent={true} animationType="fade" animationOutTiming={0}>
           
         <AgendarModal>
           <ModalRetagle>
@@ -55,7 +56,7 @@ export const SelectModal = ({ visible, setShowModalCancel, ...rest }) => {
   
             <MargT></MargT>
   
-            <ButtonModal>
+            <ButtonModal onPress={profile !== "Paciente" ? onConnectAppointment : () => navigation.replace("SelecionarClinica")}>
               <ButtonTitle>Continuar</ButtonTitle>
             </ButtonModal>
   

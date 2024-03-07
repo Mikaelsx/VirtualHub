@@ -22,14 +22,14 @@ export const Prontuario = () => {
         <Container>
         
         {/* IMAGEM DO PACIENTE */}
-            <UseHeader source={require('../../assets/Paciente.png')}></UseHeader>
+            <UseHeader source={{ uri: "https://github.com/Mikaelsx.png" }}></UseHeader>
 
         {/* CAIXA QUE CONTEM A IDADE E O EMAIL */}
             <SubTitleRow>
 
-            <SubTitle>22 anos</SubTitle>
+            <SubTitle>16 anos</SubTitle>
 
-            <SubTitle>richard.kosta@gmail.com</SubTitle>
+            <SubTitle>MikaelSouza@gmail.com</SubTitle>
 
             </SubTitleRow>
         

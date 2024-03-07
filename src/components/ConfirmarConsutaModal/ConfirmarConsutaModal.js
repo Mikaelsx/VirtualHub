@@ -13,10 +13,9 @@ import { BoxDiver, BoxFonts, BoxTit, ConfirmarModal, H1, H2, H3, ModalAgendConsu
 
 import { ConfirmarMedicoModal } from "../ConfirmarMedicoModal/ConfirmarMedicoModal";
 
-export const ConfirmarConsutaModal = ({ visible, setShowModalCancel, ...rest }) => {
-  const [statusLista, setStatusLista] = useState("pendente");
+export const ConfirmarConsutaModal = ({navigation, visible, setShowModalCancel, ...rest }) => {
+  // const [statusLista, setStatusLista] = useState("pendente");
 
-  const [confMedicoModal, setConfMedicoModal] = useState(false);
 
     return(
       
@@ -55,17 +54,12 @@ export const ConfirmarConsutaModal = ({ visible, setShowModalCancel, ...rest }) 
             </BoxDiver>
 
             </BoxFonts>
-
-            <ConfirmarMedicoModal
-            visible={confMedicoModal}
-            setShowModalCancel={setConfMedicoModal}
-            />
             
 
   
             {/* <MargT></MargT> */}
             {/* onPress={() => setConfConsultaModal(true)} */}
-            <ButtonModal onPress={() => setConfMedicoModal(true)}>
+            <ButtonModal onPress={ () => {navigation.replace("Perfil")}}>
               <ButtonTitle>Continuar</ButtonTitle>
             </ButtonModal>
   

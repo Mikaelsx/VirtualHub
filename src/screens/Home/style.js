@@ -40,3 +40,8 @@ width: 100%;
 height: 40px;
 background-color: #FFFFFF;
 `
+export const Nada = styled.View`
+width: 100%;
+height: 1px;
+background-color: #FFFFFF;
+`

@@ -7,18 +7,18 @@ export const ConfirmarModal = styled.View`
 `
 export const ModalAgendConsul = styled.View.attrs({
     shadowColor: "#000",
-shadowOffset: {
+    shadowOffset: {
 	width: 0,
 	height: 12,
-},
-shadowOpacity: 0.58,
-shadowRadius: 16.00,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
 
 elevation: 10,
 })`
     padding: 30px 30px 10px ;
     width:  95%;
-    height: 70%;
+    height: 80%;
     border-radius: 10px ;
     background-color:#fff ;
     align-items:center ;

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
 import { Container, SafeButtonBox } from "../../components/Container/style";
 import { Header } from "../../components/Header/Header";
-import { ButBox } from "./style";
+import { ButBox, Nada } from "./style";
 import { Button4 } from "./style";
 import { FilterAppointment } from "./style";
 import { Rodape } from "./style";
@@ -22,6 +22,7 @@ import { Agenda } from "react-native-calendars";
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
+import { View } from "react-native";
 // import { FontAwesome5 } from '@expo/vector-icons';
 
 // CONST
@@ -36,7 +37,7 @@ const Consultas = [
 
 // EXPORT
 
-export const Home = () => {
+export const Home = ({navigation, situacao = "Paciente",}) => {
   // state para o estado da lista(cards)
   const [statusLista, setStatusLista] = useState("pendente");
 
@@ -87,6 +88,7 @@ export const Home = () => {
           statusLista == item.situacao && (
             <AppointmentCard
               situacao={item.situacao}
+              navigation={navigation}
               onPressCancel={() => setShowModalCancel(true)}
               onPressAppointment={() => setShowModalAppointment(true)}
             />
@@ -99,24 +101,36 @@ export const Home = () => {
       {/* MODAL CANCELAR */}
       <CancelattionModal
         visible={showModalCancel}
+        navigation={navigation}
         setShowModalCancel={setShowModalCancel}
       />
       
       {/* MODAL PRONTUARIO */}
       <ShowModalAppointment
         visible={showModalAppointment}
+        navigation={navigation}
         setShowModalCancel={setShowModalAppointment}
       />
 
       {/* MODAL SELECIONAR CONSULTA */}
       <SelectModal
         visible={selectModal}
+        navigation={navigation}
         setShowModalCancel={setSelectModal}
       />
 
-      <Button4 onPress={() => setSelectModal(true)}>
-      <FontAwesome5 name="hand-holding-medical" size={20} color="white" />
-      </Button4>
+        {situacao == "cancelado" ? (
+            <></>
+          ) : situacao == "Paciente" ? (
+            <Button4 onPress={() => setSelectModal(true)}>
+            <FontAwesome5 name="hand-holding-medical" size={20} color="white" />
+            </Button4>
+          ) : (
+            <Nada></Nada>
+          ) 
+          }
+
+
 
 
     </Container>

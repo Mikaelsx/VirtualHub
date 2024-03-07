@@ -36,13 +36,12 @@ export const Login = ({ navigation }) => {
             placeholder={'Senha'}
             />
 
-            <LinkMedium onPress={ () => {navigation.replace("RecuperarSenha")}}>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={ () => {console.log(navigation); navigation.replace("RecuperarSenha")}}>Esqueceu sua senha?</LinkMedium>
 
 
             <Button onPress={(e) => Login()}>
                 <ButtonTitle>ENTRAR</ButtonTitle>
             </Button>
-
 
             <ButtonGoogle>
                 <AntDesign name="google" size={16} color="#496BBA" />

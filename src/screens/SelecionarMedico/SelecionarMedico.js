@@ -17,7 +17,7 @@ import { SubTitle, Title } from "../../components/Title/style"
 import { LinkPaciente } from "../../components/Link/style"
 import { ImagMedico } from "../../components/Logo/style"
 
-export const SelecionarMedico = () => {
+export const SelecionarMedico = ({navigation}) => {
     return(
         <Container>
     
@@ -55,12 +55,12 @@ export const SelecionarMedico = () => {
 
         <SpaceButton></SpaceButton>
 
-        <Button>
-            <ButtonTitle>EDITAR</ButtonTitle>
+        <Button onPress={ () => {navigation.replace("SelecionarData")}}>
+            <ButtonTitle>Confirmar</ButtonTitle>
         </Button>
 
             
-        <LinkSelect onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}>Cancelar</LinkSelect>
+        <LinkSelect onPress={ () => {navigation.replace("SelecionarClinica")}}>Cancelar</LinkSelect>
 
     </Container>
     )

@@ -11,7 +11,7 @@ import CalendarSelectData from "../../components/CalendarSelectData/CalendarSele
 
 import CalendarList from "../../components/Calendar/CalendarList";
 
-export const SelecionarData = () => {
+export const SelecionarData = ({navigation}) => {
     // const [statusLista, setStatusLista] = useState("pendente");
 
     const [confConsultaModal, setConfConsultaModal] = useState(false);
@@ -45,6 +45,7 @@ export const SelecionarData = () => {
         </PickerBox>
 
         <ConfirmarConsutaModal
+        navigation={navigation}
         visible={confConsultaModal}
         setShowModalCancel={setConfConsultaModal}
         />
@@ -55,7 +56,7 @@ export const SelecionarData = () => {
             <ButtonTitle>Confirmar</ButtonTitle>
         </ButtonModal>
 
-        <ButtonSecondary onPress={() => setShowModalCancel(false)}>
+        <ButtonSecondary onPress={ () => {navigation.replace("SelecionarMedico")}}>
             <ButtonSecundaryTitle>Cancelar</ButtonSecundaryTitle>
         </ButtonSecondary>
 
