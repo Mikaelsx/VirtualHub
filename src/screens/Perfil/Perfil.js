@@ -17,7 +17,7 @@ import { ConfirmarMedicoModal } from "../../components/ConfirmarMedicoModal/Conf
 
 
 
-export const Perfil = () => {
+export const Perfil = ({navigation}) => {
   const [confMedicoModal, setConfMedicoModal] = useState(false);
 
     return(

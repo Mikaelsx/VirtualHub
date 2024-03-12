@@ -1,7 +1,17 @@
 import styled from "styled-components";
 import { Title } from '../Title/style'
 
-export const ContainerCardsList = styled.View`
+export const ContainerCardsList = styled.View.attrs({
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 1,
+    },
+    shadowOpacity: 0.20,
+    shadowRadius: 1.41,
+    
+    elevation: 2,
+})`
     width: 90% ;
     margin: 0px auto ;
     margin-bottom: 12px ;

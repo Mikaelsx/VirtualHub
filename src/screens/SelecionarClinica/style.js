@@ -1,9 +1,20 @@
 import styled from "styled-components";
 import css from "styled-components";
 
-export const Select = styled.TouchableOpacity`
-    width:80% ;
+export const Select = styled.TouchableOpacity.attrs({
+    shadowColor: "#000",
+    shadowOffset: {
+	width: 0,
+	height: 1,
+    },
+    shadowOpacity: 0.20,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+})`
+    width:90% ;
     height: 85px;
+    padding: 0px 10px 0px 10px;
 
     justify-content: center;
     background-color: #FFFFFF;

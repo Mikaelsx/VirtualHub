@@ -14,10 +14,9 @@ export const UseHeader = styled.Image`
 width: 100%;
 height: 300px;
 `
-export const UseMap = styled.Image`
+export const UseMap = styled.View`
 width: 100%;
 height: 360px;
-/* margin-bottom: 50px; */
 `
 
 export const Imag = styled.Image`

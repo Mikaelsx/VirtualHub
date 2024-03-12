@@ -6,7 +6,7 @@ export const Button = styled.TouchableOpacity`
 width: 90%;
 height: 44px;
 margin: 20px 0px;
-padding: 12px 8px 12px 8px;
+padding: 8px 8px 8px 8px;
 
 align-items: center;
 justify-content: center;
@@ -78,7 +78,7 @@ export const ButtonPequeno = styled.TouchableOpacity`
 width: 50%;
 height: 44px;
 margin: 20px 0px;
-/* padding: 12px 8px 12px 8px; */
+padding: 12px 8px 12px 8px;
 flex-direction: row;
 gap: 10px;
 
@@ -138,8 +138,18 @@ background-color: #ECF2FF;
 width: 100px;
 height: 44px;
 `
-export const ButtonModal = styled(Button)`
-  width:80% ;
+export const ButtonModal = styled.TouchableOpacity`
+width: 80%;
+height: 44px;
+margin: 20px 0px;
+padding: 8px 8px 8px 8px;
+
+align-items: center;
+justify-content: center;
+
+background-color: #496BBA;
+border: 2px solid #496BBA;
+border-radius: 5px; 
 `
 export const ButtonSecondary = styled(Button)`
   background-color: transparent ;

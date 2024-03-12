@@ -11,6 +11,8 @@ import { ContentIcon, TextIcon } from './style';
 
 import { FontAwesome, FontAwesome5} from '@expo/vector-icons'
 
+import { Container } from '../../components/Container/style';
+
 
 // EXPORT
 export const Main = () => {

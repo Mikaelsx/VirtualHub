@@ -17,6 +17,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Button } from "../../components/Button/style";
 import { ButtonTitle } from "../../components/ButtonTitle/style";
 import { SpaceButton } from "../../screens/SelecionarMedico/style";
+import { Main } from "../Main/Main"
 
 export const SelecionarClinica = ({navigation}) => {
     return(

@@ -28,11 +28,9 @@ import { View } from "react-native";
 // CONST
 
 const Consultas = [
-  { id: 1, nome: "Carlos", situacao: "pendente" },
-  { id: 2, nome: "Carlos", situacao: "realizado" },
-  { id: 3, nome: "Carlos", situacao: "pendente" },
-  { id: 4, nome: "Carlos", situacao: "pendente" },
-  { id: 5, nome: "Carlos", situacao: "cancelado" },
+  { id: 1, nome: "Mikael", situacao: "pendente" },
+  { id: 2, nome: "Mikael", situacao: "realizado" },
+  { id: 3, nome: "Mikael", situacao: "cancelado" },
 ];
 
 // EXPORT

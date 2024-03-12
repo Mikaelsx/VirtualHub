@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Calendar, LocaleConfig } from "react-native-calendars";
 
-const CalendarComponent = () => {
+const CalendarSelectData = () => {
     
   const [selected, setSelected] = useState("");
 
@@ -47,7 +47,8 @@ const CalendarComponent = () => {
         },
       }}
 
-      minDate={startingDate}
+      // AQUI
+      // minDate={startingDate}
 
       theme={{
         calendarBackground : '#FAFAFA',
@@ -71,4 +72,4 @@ const CalendarComponent = () => {
   );
 };
 
-export default CalendarComponent;
+export default CalendarSelectData;
