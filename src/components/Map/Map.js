@@ -98,7 +98,7 @@ export const Map = () => {
           }}
           provider={PROVIDER_GOOGLE}
           style={ styles.map }
-          customMapStyle={grayMapStyle}
+          // customMapStyle={grayMapStyle}
         >
           {/* MARCADOR - INICIAL */}
         <Marker

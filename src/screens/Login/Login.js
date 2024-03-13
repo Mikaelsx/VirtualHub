@@ -15,6 +15,7 @@ import { ButtonTitleGoogle } from "../../components/Button/style"
 
 import { Linking } from "react-native"
 import { AntDesign } from '@expo/vector-icons';
+// import { ColorToggle } from "../../components/ColorToggle/ColorToggle"
 
 // EXPORT
 
@@ -25,6 +26,7 @@ export const Login = ({ navigation }) => {
     }
     return(
         <Container>
+            {/* <ColorToggle></ColorToggle> */}
             <Logo source={require('../../assets/Logo.png')} />
 
             <Title>Entrar ou criar conta</Title>
