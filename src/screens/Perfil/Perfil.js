@@ -84,7 +84,7 @@ export const Perfil = ({navigation}) => {
                 <ButtonTitle>SALVAR</ButtonTitle>
             </Button>
 
-            <Button>
+            <Button onPress={ () => {console.log(navigation); navigation.replace("Prescricao")}}>
                 <ButtonTitle>EDITAR</ButtonTitle>
             </Button>
 

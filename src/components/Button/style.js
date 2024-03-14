@@ -78,7 +78,7 @@ export const ButtonPequeno = styled.TouchableOpacity`
 width: 50%;
 height: 44px;
 margin: 20px 0px;
-padding: 12px 8px 12px 8px;
+padding: 8px 8px 8px 8px;
 flex-direction: row;
 gap: 10px;
 

@@ -18,10 +18,13 @@ import { TitleInput } from "../../components/Title/style"
 
 import { Linking } from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useState } from "react"
 
 // EXPORT
 
-export const Prescricao = () => {
+export const Prescricao = ({navigation}) => {
+    const [photo, setPhoto] = useState( null )
+
     return(
         <Container>
             <UseHeader source={require('../../assets/Doutor.png')}/>
@@ -51,16 +54,16 @@ export const Prescricao = () => {
 
             <SafeInputBox>
             <TitleInput>Exames médicos</TitleInput>
-            <InputPacienteGrande placeholder={'Nenhuma foto informada'}/>
+            <InputPacienteGrande placeholder={photo}/>
             </SafeInputBox>
 
             <LineView>
-            <ButtonPequeno>
+            <ButtonPequeno onPress={ () => {navigation.replace("CameraPage")}}>
                 <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
                 <ButtonTitle>Enviar</ButtonTitle>
             </ButtonPequeno>
 
-            <LinkRed onPress={ () => {Linking.openURL('https://cursos.alura.com.br/forum/topico-botao-com-link-externo-205828')}}>Cancelar</LinkRed>
+            <LinkRed onPress={ () => {console.log(navigation); navigation.replace("Perfil")}}>Cancelar</LinkRed>
             </LineView>
 
             {/* LINHA */}
