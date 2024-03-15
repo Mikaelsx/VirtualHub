@@ -14,7 +14,7 @@ export const SelectModal = ({navigation, visible, setShowModalCancel, ...rest })
   const [profile, setProfile] = useState("Paciente")
   const [statusLista, setStatusLista] = useState("pendente");
 
-    return(
+    return( 
       
         <Modal {...rest} visible={visible} transparent={true} animationType="fade" animationOutTiming={0}>
           

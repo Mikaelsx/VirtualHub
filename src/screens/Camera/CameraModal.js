@@ -16,7 +16,7 @@ import { LinkRed } from '../../components/Link/style';
 import { CaptureButtom, EndCamera, Flip } from './styles';
 
 
-export const CameraPage = ({navigation}) => {
+export const CameraModal = ({navigation, visible, setUriCameraCapture, setShowModalCancel, ...rest }) => {
    // CONSTANTE DE CAPTURA 
    const cameraRef = useRef( null )
 
@@ -28,6 +28,9 @@ export const CameraPage = ({navigation}) => {
  
    // CAMERA FRONTAL
    const [tipoCamera, setTipoCamera] = useState( CameraType.front )
+
+   // CAMERA FRONTAL
+   const [capturePhoto, setCapturePhoto] = useState( null )
  
    useEffect(() => {
      (async () => {
@@ -39,6 +42,11 @@ export const CameraPage = ({navigation}) => {
      })();
    },[])
  
+   async function SendFormPhoto() {
+    await setUriCameraCapture( capturePhoto )
+
+    handleClose()
+   }
    // FUNÇÃO DE ARMAZENAR FOTO
    async function UploadPhoto() {
      await MediaLibrary.createAssetAsync( photo )
@@ -77,6 +85,7 @@ export const CameraPage = ({navigation}) => {
      }
    }
   return(
+    <Modal {...rest} visible={visible} transparent={true} animationType="fade" animationOutTiming={0}>
     <View style={styles.container}>
 
     {/* CAMERA */}
@@ -99,7 +108,12 @@ export const CameraPage = ({navigation}) => {
       <FontAwesome name='camera' size={18} color='#FFFFFF' />
     </CaptureButtom>
 
-    <EndCamera onPress={ () => {console.log(navigation); navigation.replace("Prescricao")}}>Sair</EndCamera>
+    {/* BOTÃO DE CAPTURAR IMAGEM */}
+    {/* <CaptureButtom onPress={ () => SendFormPhoto() }>
+      <FontAwesome name='camera' size={18} color='red' />
+    </CaptureButtom> */}
+
+    <EndCamera onPress={() => setShowModalCancel(false)}>Sair</EndCamera>
 
 
     <Modal animationType='slide' transparent={false} visible={openModal}>
@@ -131,6 +145,7 @@ export const CameraPage = ({navigation}) => {
       </View>
     </Modal>
   </View>
+  </Modal>
   )
 }
 

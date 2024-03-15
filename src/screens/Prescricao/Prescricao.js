@@ -18,12 +18,19 @@ import { TitleInput } from "../../components/Title/style"
 
 import { Linking } from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { CameraModal } from "../Camera/CameraModal"
+
+// import CameraModal from '../Camera/CameraModal'
 
 // EXPORT
 
 export const Prescricao = ({navigation}) => {
-    const [photo, setPhoto] = useState( null )
+    const [photo, setPhoto] = useState( false )
+    const [uriCameraCapture, setUriCameraCapture] = useState( false )
+    const [showCameraModal, setShowCameraModal] = useState( false )
+
+    // useEffect() => {}
 
     return(
         <Container>
@@ -54,11 +61,18 @@ export const Prescricao = ({navigation}) => {
 
             <SafeInputBox>
             <TitleInput>Exames médicos</TitleInput>
-            <InputPacienteGrande placeholder={photo}/>
+            {/* <InputPacienteGrande placeholder={photo}/> */}
             </SafeInputBox>
 
+            <CameraModal
+                visible={showCameraModal}
+                setUriCameraCapture={setUriCameraCapture}
+                // setShowCameraModal={setShowCameraModal}
+                setShowModalCancel={setShowCameraModal}
+            />
+
             <LineView>
-            <ButtonPequeno onPress={ () => {navigation.replace("CameraPage")}}>
+            <ButtonPequeno onPress={ () => setShowCameraModal(true)}>
                 <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
                 <ButtonTitle>Enviar</ButtonTitle>
             </ButtonPequeno>

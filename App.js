@@ -23,7 +23,6 @@ import { SelecionarClinica } from "./src/screens/SelecionarClinica/SelecionarCli
 import { SelecionarMedico } from "./src/screens/SelecionarMedico/SelecionarMedico";
 import { SelecionarData } from "./src/screens/SelecionarData/SelecionarData";
 import { ConfirmarLocal } from "./src/screens/ConfirmarLocal/ConfirmarLocal";
-import { CameraPage } from "./src/screens/Camera/CameraPage";
 
 // IMPORT - FONTS
 
@@ -147,11 +146,6 @@ export default function App() {
            name="ConsultasMedico"
            component={ConsultasMedico}
            options={{ title: "ConsultasMedico" }}
-         />
-         <Stack.Screen
-           name="CameraPage"
-           component={CameraPage}
-           options={{ title: "CameraPage" }}
          />
 
       </Stack.Navigator>
